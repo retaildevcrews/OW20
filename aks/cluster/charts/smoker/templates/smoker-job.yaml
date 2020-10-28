@@ -22,6 +22,7 @@ spec:
             - name: smoker
               image: retaildevcrew/webvalidate:beta
               imagePullPolicy: Always
+              # See https://github.com/microsoft/webvalidate#command-line-parameters for a guide to WebV arguments
               args:
                 - '-s'
                 - '{{ .Values.ingressURL }}'

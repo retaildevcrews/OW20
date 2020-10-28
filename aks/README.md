@@ -267,7 +267,7 @@ Add the required helm repositories
 ```bash
 
 helm repo add stable https://kubernetes-charts.storage.googleapis.com
-helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts 
+helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
 helm repo update
 
 ```

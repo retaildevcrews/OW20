@@ -332,7 +332,7 @@ Install the Istio Operator and Components on AKS
 
 istioctl operator init
 kubectl create ns istio-system
-kubectl apply -f $REPO_ROOT/docs/aks/cluster/manifests/istio/istio.aks.yaml
+kubectl apply -f $REPO_ROOT/aks/cluster/manifests/istio/istio.aks.yaml
 
 # the istio resources will take about a minute to be installed
 
@@ -442,6 +442,43 @@ Run the Validation Test
 ```bash
 
 # run the tests in a container
-docker run -it --rm retaildevcrew/webvalidate --server $He_App_Endpoint --base-url https://raw.githubusercontent.com/retaildevcrews/helium/main/TestFiles/ --files baseline.json
+docker run -it --rm retaildevcrew/webvalidate --server http://${INGRESS_PIP}.nip.io --base-url https://raw.githubusercontent.com/retaildevcrews/helium/main/TestFiles/ --files baseline.json
 
 ```
+
+## Observability
+
+Access the analytics and monitoring dashboards provided by Istio.
+
+```bash
+
+# Access Grafana (live tail metrics dashboard)
+istioctl dashboard grafana
+
+# Access Prometheus (metrics dashboard)
+istioctl dashboard prometheus
+
+# Access Kiali (Service Mesh Observability Dashboard)
+istioctl dashboard kiali
+
+# Access Jaeger (Request tracing)
+istioctl dashboard jaeger
+
+```
+
+## Smoke Tests
+
+Use Web Validate to to stress test the application and drive up the RUs on the Cosmos DB. Deploy these smokers to AKS as cronjobs.
+
+```bash
+
+cd $REPO_ROOT/aks/cluster/charts
+
+helm install helium-smoker smoker --set ingressURL=http://${INGRESS_PIP}.nip.io
+
+# Verify the cron jobs are installed
+kubectl get cronjobs
+
+```
+
+The cronjobs are set to run for 2 minutes every 5 minutes.

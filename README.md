@@ -1,6 +1,57 @@
-# My new repo
+# OneWeek 2020: Crew 512 + Crew Cosmonauts
 
-> My new repo description ...
+
+
+> The goal of this project is to collaborate as a team and be able to integrate and demonstrate some of the different capabilities that Kubernetes + Istio Service Mesh offer.
+
+
+## Team 1: Traffic Patterns using ISTIO and different version of Helium
+
+- Blue Green Pattern
+- Canary Pattern
+- Circuit Breaker (Disaster Recovery/HA modes active-active or active standby)
+- Use Kiali to show and test traffic flow for all three patterns
+
+### Members:
+  - TBD
+  - TBD
+  - TBD
+  - TBD
+
+### Lessons Learned:
+
+  - TBD
+
+## Team 2: Scaling out the application under heavy load
+
+- Use a horizontal pod autoscaler (HPA) resource to scale pods in same cluster
+- Auto-scale current cluster by adding new nodes
+- *Bonus: Scaling Cosmos DB when the load is high*
+
+### Members:
+  - TBD
+  - TBD
+  - TBD
+  - TBD
+
+### Lessons Learned:
+  - TBD
+
+## Team 3: Multi-Cluster Service Mesh
+
+  - Burst/Route Helium traffic to different clusters
+  - Setup Dashboard showing traffic flow between cluster
+
+
+### Members:
+  - TBD
+  - TBD
+  - TBD
+  - TBD
+
+### Lessons Learned:
+
+  - TBD
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 

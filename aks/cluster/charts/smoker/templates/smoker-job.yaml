@@ -1,0 +1,41 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{  include "smoker.fullname" . }}
+  annotations:
+    fluxcd.io/ignore: 'true'
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+spec:
+  schedule: '*/5 * * * *'
+  successfulJobsHistoryLimit: {{ .Values.jobHistoryLimit }}
+  jobTemplate:
+    spec:
+      completions: {{ .Values.jobReplicaCount }}
+      parallelism: {{ .Values.jobReplicaCount }}
+      template:
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: "false"
+        spec:
+          containers:
+            - name: smoker
+              image: retaildevcrew/webvalidate:beta
+              imagePullPolicy: Always
+              # See https://github.com/microsoft/webvalidate#command-line-parameters for a guide to WebV arguments
+              args:
+                - '-s'
+                - '{{ .Values.ingressURL }}'
+                - '-u'
+                - 'https://raw.githubusercontent.com/retaildevcrews/ngsa/main/TestFiles/'
+                - '-f'
+                - 'benchmark.json'
+                - '-r'
+                - '--summary-minutes'
+                - '1'
+                - '--duration'
+                - '120'
+                - '-l'
+                - '100'
+                - '--json-log'
+          restartPolicy: OnFailure

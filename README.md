@@ -12,7 +12,7 @@
 - Circuit Breaker (Disaster Recovery/HA modes active-active or active standby)
 - Use Kiali to show and test traffic flow for all three patterns
 
-- Members:
+### Members:
   - TBD
   - TBD
   - TBD
@@ -26,10 +26,9 @@
 
 - Use a horizontal pod autoscaler (HPA) resource to scale pods in same cluster
 - Auto-scale current cluster by adding new nodes
-- Burst/Route traffic into another cluster
 - *Bonus: Scaling Cosmos DB when the load is high*
 
-- Members:
+### Members:
   - TBD
   - TBD
   - TBD
@@ -38,11 +37,13 @@
 ### Lessons Learned:
   - TBD
 
-## Team 3: TBD
+## Team 3: Multi-Cluster Service Mesh
 
-- TBD
+  - Burst/Route Helium traffic to different clusters
+  - Setup Dashboard showing traffic flow between cluster
 
-- Members:
+
+### Members:
   - TBD
   - TBD
   - TBD
@@ -50,7 +51,7 @@
 
 ### Lessons Learned:
 
-TBD
+  - TBD
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 

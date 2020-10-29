@@ -1,9 +1,6 @@
 # OneWeek 2020: Crew 512 + Crew Cosmonauts
 
-
-
 > The goal of this project is to collaborate as a team and be able to integrate and demonstrate some of the different capabilities that Kubernetes + Istio Service Mesh offer.
-
 
 ## Team 1: Traffic Patterns using ISTIO and different version of Helium
 
@@ -52,6 +49,8 @@
 ### Lessons Learned:
 
   - TBD
+
+More info can be found [here](autoscaling/README.md).
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 

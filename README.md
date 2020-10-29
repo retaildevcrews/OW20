@@ -1,11 +1,14 @@
 # OneWeek 2020: Crew 512 + Crew Cosmonauts
 
-> The goal of this project is to demonstrate different capabilities using Istio Service Mesh.
 
-## Traffic Patterns using ISTIO and different version of Helium
 
-- Blue Green
-- Canary
+> The goal of this project is to collaborate as a team and be able to integrate and demonstrate some of the different capabilities that Kubernetes + Istio Service Mesh offer.
+
+
+## Team 1: Traffic Patterns using ISTIO and different version of Helium
+
+- Blue Green Pattern
+- Canary Pattern
 - Circuit Breaker (Disaster Recovery/HA modes active-active or active standby)
 - Use Kiali to show and test traffic flow for all three patterns
 
@@ -15,16 +18,16 @@
   - TBD
   - TBD
 
-### Traffic Patterns Overview
+### Lessons Learned:
 
-TBD
+  - TBD
 
-## Scaling out the application under heavy load
+## Team 2: Scaling out the application under heavy load
 
-- Expand current cluster by adding new nodes
 - Use a horizontal pod autoscaler (HPA) resource to scale pods in same cluster
-- Burst traffic into another cluster
-- *Bonus: Look into scaling Cosmos DB when the load is high as well*
+- Auto-scale current cluster by adding new nodes
+- Burst/Route traffic into another cluster
+- *Bonus: Scaling Cosmos DB when the load is high*
 
 - Members:
   - TBD
@@ -32,13 +35,12 @@ TBD
   - TBD
   - TBD
 
-### Scaling Overview
+### Lessons Learned:
+  - TBD
 
-TBD
+## Team 3: TBD
 
-## Integrating Istio Grafana with Tempo
-
-- Integrate Tempo distributed tracing capabilities with Istio
+- TBD
 
 - Members:
   - TBD
@@ -46,7 +48,7 @@ TBD
   - TBD
   - TBD
 
-### Tempo Overview
+### Lessons Learned:
 
 TBD
 

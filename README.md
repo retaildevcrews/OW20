@@ -50,8 +50,6 @@
 
   - TBD
 
-More info can be found [here](autoscaling/README.md).
-
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Contributing

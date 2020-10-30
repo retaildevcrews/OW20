@@ -13,10 +13,10 @@
 - Use Kiali to show and test traffic flow for all three patterns
 
 ### Members:
-  - TBD
-  - TBD
-  - TBD
-  - TBD
+  - [Alfredo](https://github.com/alfredoihernandez)
+  - [Jim](https://github.com/jkeane)
+  - [Kevin](https://github.com/kev-ms)
+  - [Joseph](https://github.com/jofultz)
 
 ### Lessons Learned:
 
@@ -29,10 +29,10 @@
 - *Bonus: Scaling Cosmos DB when the load is high*
 
 ### Members:
-  - TBD
-  - TBD
-  - TBD
-  - TBD
+  - [Kushal](https://github.com/kforeverisback)
+  - [Gerardo](https://github.com/gortegaMS)
+  - [Siva](https://github.com/sivamu)
+  - [Joaquin](https://github.com/joaquinrz)
 
 ### Lessons Learned:
   - TBD
@@ -42,12 +42,10 @@
   - Burst/Route Helium traffic to different clusters
   - Setup Dashboard showing traffic flow between cluster
 
-
 ### Members:
-  - TBD
-  - TBD
-  - TBD
-  - TBD
+  - [AK](https://github.com/AAkindele)
+  - [Anne](https://github.com/aflinchb) 
+  - [Nsikan](https://github.com/PurpleBriar)
 
 ### Lessons Learned:
 

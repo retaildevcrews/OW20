@@ -21,6 +21,7 @@ spec:
   template:
     metadata:
       labels:
+        version: "{{ .Values.labels.version }}"
 {{- toYaml .Values.labels | nindent 8 }}
         chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
         app.kubernetes.io/name: {{ include "helium.name" . }}

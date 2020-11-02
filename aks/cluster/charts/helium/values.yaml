@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 labels:
   aadpodidbinding: podid
+  version: ""
 replicaCount: 1
 
 image:

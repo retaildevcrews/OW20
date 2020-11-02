@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 labels:
   aadpodidbinding: owtraffic-mi #should be value of $MI_Name from the output of aad-podid.sh
+  version: blue
 
 image:
   repository: retaildevcrew #The specific acr created for this environment

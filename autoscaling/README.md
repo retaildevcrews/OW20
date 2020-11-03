@@ -61,7 +61,7 @@ Replace the values in the `azure-dashboard.json` file surrounded by `%%` with th
 
 ```bash
 
-sed -i "s/%%SUBSCRIPTION_GUID%%/$(eval He_Sub)/g" azure-dashboard.json && \
+sed -i "s/%%SUBSCRIPTION_GUID%%/$(eval $He_Sub)/g" azure-dashboard.json && \
 sed -i "s/%%AKS_RESOURCE_GROUP%%/${He_App_RG}/g" azure-dashboard.json && \
 sed -i "s/%%COSMOS_RESOURCE_GROUP%%/${Imdb_RG}/g" azure-dashboard.json && \
 sed -i "s/%%HE_NAME%%/${He_Name}/g" azure-dashboard.json

@@ -4,7 +4,6 @@
 
 - Expand current cluster by adding new nodes
 - Use a horizontal pod autoscaler (HPA) resource to scale pods in same cluster
-- Burst traffic into another cluster
 - *Bonus: Look into scaling Cosmos DB when the load is high as well*
 
 ### HPA with Prometheus Adapter
@@ -55,3 +54,15 @@ grafana-dashboard.json
 You will end up with a dashboard that looks like this.
 
 ![alt text](./images/grafana-dashboard.png "Sample Grafana Dashboard")
+
+#### Visualize Scaling with Azure Dashboards
+
+Replace the values in the `azure-dashboard.json` file surrounded by `%%` with the proper environment variables.
+
+```bash
+
+sed -i "s/%%SUBSCRIPTION_GUID%%/${He_Sub}/g" azure-dashboard.json && \
+sed -i "s/%%AKS_RESOURCE_GROUP%%/${He_App_RG}/g" azure-dashboard.json && \
+sed -i "s/%%COSMOS_RESOURCE_GROUP%%/${Imdb_RG}/g" azure-dashboard.json
+
+```

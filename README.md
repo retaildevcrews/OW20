@@ -9,15 +9,16 @@
 - Circuit Breaker (Disaster Recovery/HA modes active-active or active standby)
 - Use Kiali to show and test traffic flow for all three patterns
 
-### Members:
-  - [Alfredo](https://github.com/alfredoihernandez)
-  - [Jim](https://github.com/jkeane)
-  - [Kevin](https://github.com/kev-ms)
-  - [Joseph](https://github.com/jofultz)
+### Team 1 Members
 
-### Lessons Learned:
+- [Alfredo](https://github.com/alfredoihernandez)
+- [Jim](https://github.com/jkeane)
+- [Kevin](https://github.com/kev-ms)
+- [Joseph](https://github.com/jofultz)
 
-  - TBD
+### Traffic Patterns Findings
+
+[Documentation](./traffic-patterns/README.md)
 
 ## Team 2: Scaling out the application under heavy load
 
@@ -25,28 +26,31 @@
 - Auto-scale current cluster by adding new nodes
 - *Bonus: Scaling Cosmos DB when the load is high*
 
-### Members:
-  - [Kushal](https://github.com/kforeverisback)
-  - [Gerardo](https://github.com/gortegaMS)
-  - [Siva](https://github.com/sivamu)
-  - [Joaquin](https://github.com/joaquinrz)
+### Team 2 Members
 
-### Lessons Learned:
-  - TBD
+- [Kushal](https://github.com/kforeverisback)
+- [Gerardo](https://github.com/gortegaMS)
+- [Siva](https://github.com/sivamu)
+- [Joaquin](https://github.com/joaquinrz)
+
+### Scaling Findings
+
+[Documentation](./autoscaling/README.md)
 
 ## Team 3: Multi-Cluster Service Mesh
 
-  - Burst/Route Helium traffic to different clusters
-  - Setup Dashboard showing traffic flow between cluster
+- Burst/Route Helium traffic to different clusters
+- Setup Dashboard showing traffic flow between cluster
 
-### Members:
-  - [AK](https://github.com/AAkindele)
-  - [Anne](https://github.com/aflinchb) 
-  - [Nsikan](https://github.com/PurpleBriar)
+### Team 3 Members
 
-### Lessons Learned:
+- [AK](https://github.com/AAkindele)
+- [Anne](https://github.com/aflinchb)
+- [Nsikan](https://github.com/PurpleBriar)
 
-  - TBD
+### Multi-Cluster Service Mesh Findings
+
+[Documentation](./multicluster/README.md)
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 

@@ -481,4 +481,4 @@ kubectl get cronjobs
 
 ```
 
-The cronjobs are set to run for 2 minutes every 5 minutes.
+The cronjobs are set to run for 15 minutes every 20 minutes.

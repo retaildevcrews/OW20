@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: helium-aks
+spec:
+  host: helium-aks
+  subsets:
+  - name: blue
+    labels:
+      randlabel: blue
+  - name: green
+    labels:
+      randlabel: green

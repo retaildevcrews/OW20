@@ -19,4 +19,12 @@ spec:
     - destination:
         port:
           number: {{ .Values.service.port }}
-        host: {{ include "helium.fullname" . }}
+        host: helium-aks
+        subset: blue
+      weight: 50
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: helium-aks
+        subset: green
+      weight: 50

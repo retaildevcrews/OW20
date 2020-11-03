@@ -20,5 +20,5 @@ keyVaultName: owteam3 # Replace with the name of the Key Vault that holds the se
 
 oneWeekVersion: mainCluster
 oneWeekDeployName: helium-aks-main
-oneWeekMainWeight: 100
-oneWeekRemote0Weight: 0
+oneWeekMainWeight: 50
+oneWeekRemote0Weight: 50

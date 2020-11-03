@@ -42,10 +42,10 @@ service:
 ingress:
   hosts:
     - <INGRESS_PIP>.nip.io
-  
+
   paths:
     - /
-  
+
   tls: {}
 
 resources:
@@ -63,3 +63,8 @@ tolerations: []
 affinity: {}
 
 keyVaultName: ""
+
+oneWeekVersion: ""
+oneWeekDeployName: ""
+oneWeekMainWeight: 50
+oneWeekRemote0Weight: 50

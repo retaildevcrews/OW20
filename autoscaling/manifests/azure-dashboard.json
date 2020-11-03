@@ -51,7 +51,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
                           },
                           "name": "requests/count",
                           "aggregationType": 7,
@@ -468,27 +468,6 @@
                         "top": 10
                       }
                     }
-                  }
-                }
-              }
-            }
-          },
-          "9": {
-            "position": {
-              "x": 0,
-              "y": 9,
-              "colSpan": 3,
-              "rowSpan": 3
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "# Cosmos Key Rotation\n\n",
-                    "title": " ",
-                    "subtitle": ""
                   }
                 }
               }

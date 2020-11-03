@@ -1,12 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "helium.fullname" . }}
+  name: {{ .Values.oneWeekDeployName }}
   labels:
 {{- toYaml .Values.labels | nindent 4 }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     app.kubernetes.io/name: {{ include "helium.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
+    app: {{ include "helium.name" . }}
+    version: {{ .Values.oneWeekVersion | replace "+" "_" }}
   {{- with .Values.annotations }}
   annotations:
     rollme: {{ randAlphaNum 5 | quote }}
@@ -26,7 +28,7 @@ spec:
         app.kubernetes.io/name: {{ include "helium.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         app: {{ include "helium.name" . }}
-        version: {{ .Chart.AppVersion | replace "+" "_" }}
+        version: {{ .Values.oneWeekVersion | replace "+" "_" }}
       {{- with .Values.annotations }}
       annotations:
 {{ toYaml . | indent 8 }}

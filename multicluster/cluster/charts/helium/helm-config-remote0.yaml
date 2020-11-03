@@ -1,0 +1,22 @@
+# Default values for helium.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+labels:
+  aadpodidbinding: owteam3-remote-mi #should be value of $MI_Name from the output of aad-podid.sh
+
+image:
+  repository: retaildevcrew #The specific acr created for this environment
+  name: helium-typescript # The name of the image for the helium-csharp repo
+  tag: beta
+
+ingress:
+  hosts:
+    - 13.89.136.229.nip.io # main
+    - 52.154.162.242.nip.io # remote
+  paths:
+    - /
+
+keyVaultName: owteam3 # Replace with the name of the Key Vault that holds the secrets
+
+oneWeekVersion: remote0Cluster
+oneWeekDeployName: helium-aks-remote0

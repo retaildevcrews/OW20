@@ -14,8 +14,7 @@ spec:
     tls:
       {{- toYaml . | nindent 6 }}
     {{- end }}
-    hosts: 
+    hosts:
     {{- range .Values.ingress.hosts }}
       - {{ . | quote }}
     {{- end }}
-    

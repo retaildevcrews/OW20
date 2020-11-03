@@ -51,7 +51,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%"
                           },
                           "name": "requests/count",
                           "aggregationType": 7,
@@ -114,7 +114,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%"
                           },
                           "name": "requests/duration",
                           "aggregationType": 4,
@@ -198,7 +198,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%"
                           },
                           "name": "requests/count",
                           "aggregationType": 1,
@@ -363,7 +363,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%"
                           },
                           "name": "requests/failed",
                           "aggregationType": 1,
@@ -431,7 +431,7 @@
                       "metrics": [
                         {
                           "resourceMetadata": {
-                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%-aks"
+                            "id": "/subscriptions/%%SUBSCRIPTION_GUID%%/resourceGroups/%%AKS_RESOURCE_GROUP%%/providers/microsoft.insights/components/%%HE_NAME%%"
                           },
                           "name": "requests/failed",
                           "aggregationType": 1,

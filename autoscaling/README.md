@@ -2,7 +2,7 @@
 
 ## Goals
 
-- Expand current cluster by adding new nodes
+- ~~Expand current cluster by adding new nodes~~ (Scrapped since this is a Platform feature, not related to Istio)
 - Use a horizontal pod autoscaler (HPA) resource to scale pods in same cluster
 - *Bonus: Look into scaling Cosmos DB when the load is high as well*
 
@@ -22,7 +22,7 @@ avg(rate(istio_requests_total{pod_name=~"helium.*"}[1m]))
 
 > NOTE: All the YAML template files used in this setup are available in the manifests directory. Move and/or modify them as needed to fit your need.
 
-Install the Prometheus Adapter and create the HPA object.
+Install the Prometheus Adapter and create the HPA object. Refer to the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-configurable-scaling-behavior) for more information on adjusting the HPA scaling parameters.
 
 ```bash
 
@@ -34,6 +34,10 @@ helm install prometheus-adapter prometheus-community/prometheus-adapter -f prom-
 kubectl apply -f hpa.yaml
 
 ```
+
+#### Stress test the application
+
+Run the [smoke tests](../aks/README.md#smoke-tests) suite to stress test your application and drive the Request Units (RUs) on the Cosmos DB.
 
 #### Visualize Scaling with Grafana
 
@@ -67,3 +71,11 @@ sed -i "s/%%COSMOS_RESOURCE_GROUP%%/${Imdb_RG}/g" azure-dashboard.json && \
 sed -i "s/%%HE_NAME%%/${He_Name}/g" azure-dashboard.json
 
 ```
+
+You should see a dashboard similar to below.
+
+![alt text](./images/azure-dashboard.png "Sample Azure Dashboard")
+
+#### Autoscale Cosmos
+
+Refer to this [documentation page](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-provision-autoscale-throughput?tabs=api-async) enable autoscaling throughput for the Cosmos DB instances.

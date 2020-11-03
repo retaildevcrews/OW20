@@ -22,15 +22,12 @@ spec:
       stabilizationWindowSeconds: 0
       policies:
       - type: Percent
-        value: 100
-        periodSeconds: 5
-      - type: Pods
-        value: 4
-        periodSeconds: 5
+        value: 20
+        periodSeconds: 30
       selectPolicy: Max
     scaleDown:
       stabilizationWindowSeconds: 60
       policies:
         - type: Percent
-          value: 10
+          value: 20
           periodSeconds: 30

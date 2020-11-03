@@ -1,12 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "helium.fullname" . }}
+  name: {{ include "helium.fullname" . }}-blue
   labels:
 {{- toYaml .Values.labels | nindent 4 }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
-    app.kubernetes.io/name: {{ include "helium.name" . }}
+    app.kubernetes.io/name: {{ include "helium.name" . }}-blue
     app.kubernetes.io/instance: {{ .Release.Name }}
+    app: blue
   {{- with .Values.annotations }}
   annotations:
     rollme: {{ randAlphaNum 5 | quote }}
@@ -16,17 +17,17 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "helium.name" . }}
+      app.kubernetes.io/name: {{ include "helium.fullname" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
 {{- toYaml .Values.labels | nindent 8 }}
         chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
-        app.kubernetes.io/name: {{ include "helium.name" . }}
+        app.kubernetes.io/name: {{ include "helium.fullname" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         app: {{ include "helium.name" . }}
-        version: {{ .Chart.AppVersion | replace "+" "_" }}
+        version: blue
       {{- with .Values.annotations }}
       annotations:
 {{ toYaml . | indent 8 }}
@@ -43,8 +44,8 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.blueimage.repository }}/{{ .Values.blueimage.name }}:{{ .Values.blueimage.tag }}"
+          imagePullPolicy: {{ .Values.blueimage.pullPolicy }}
           env:
             - name: WEBSITE_ROLE_INSTANCE_ID
               valueFrom:

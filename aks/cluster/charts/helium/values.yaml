@@ -5,9 +5,15 @@ labels:
   aadpodidbinding: podid
 replicaCount: 1
 
-image:
+blueimage:
   repository: retaildevcrew
   name: helium-csharp
+  tag: beta
+  pullPolicy: IfNotPresent
+
+greenimage:
+  repository: retaildevcrew
+  name: helium-typescript
   tag: beta
   pullPolicy: IfNotPresent
 

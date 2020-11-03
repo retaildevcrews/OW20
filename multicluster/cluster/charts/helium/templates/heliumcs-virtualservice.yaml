@@ -28,3 +28,9 @@ spec:
         host: {{ include "helium.fullname" . }}
         subset: remote0Cluster
       weight: {{ .Values.oneWeekRemote0Weight }}
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "helium.fullname" . }}
+        subset: remote1Cluster
+      weight: {{ .Values.oneWeekRemote1Weight }}

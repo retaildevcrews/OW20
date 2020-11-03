@@ -12,7 +12,8 @@ image:
 ingress:
   hosts:
     - 13.89.136.229.nip.io # main
-    - 52.154.162.242.nip.io # remote
+    - 52.154.162.242.nip.io # remote0
+    - 40.89.240.186.nip.io # remote1
   paths:
     - /
 
@@ -22,3 +23,4 @@ oneWeekVersion: mainCluster
 oneWeekDeployName: helium-aks-main
 oneWeekMainWeight: 100
 oneWeekRemote0Weight: 0
+oneWeekRemote1Weight: 0

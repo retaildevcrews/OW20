@@ -67,4 +67,5 @@ keyVaultName: ""
 oneWeekVersion: ""
 oneWeekDeployName: ""
 oneWeekMainWeight: 50
-oneWeekRemote0Weight: 50
+oneWeekRemote0Weight: 25
+oneWeekRemote1Weight: 25

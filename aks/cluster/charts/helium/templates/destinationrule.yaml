@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: blue
+spec:
+  host: blue
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+
+  subsets:
+  - name: v1
+    labels:
+      version: green
+    trafficPolicy:
+      loadBalancer:
+        simple: ROUND_ROBIN
+
+
+  - name: v2
+    labels:
+      version: blue
+    trafficPolicy:
+      loadBalancer:
+        simple: ROUND_ROBIN

@@ -20,3 +20,11 @@ spec:
         port:
           number: {{ .Values.service.port }}
         host: {{ include "helium.fullname" . }}
+        subset: v1
+      weight: 0
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "helium.fullname" . }}
+        subset: v2
+      weight: 100

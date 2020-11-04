@@ -40,7 +40,7 @@ spec:
           gateways:
           - registry_service_name: istio-ingressgateway.istio-system.svc.cluster.local
             port: 443
-        
+
         network3:
           endpoints:
           - fromRegistry: remote1

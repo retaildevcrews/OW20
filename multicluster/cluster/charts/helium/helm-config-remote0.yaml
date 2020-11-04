@@ -10,10 +10,10 @@ image:
   tag: beta
 
 ingress:
-  hosts:
-    - 13.89.136.229.nip.io # main
-    - 52.154.162.242.nip.io # remote0
-    - 40.89.240.186.nip.io # remote1
+  hosts:          # run command 'kubectl get service istio-ingressgateway -n istio-system --context <clusterName>' to get ip addresses needed below:
+    - 13.89.136.229.nip.io # replace with external ip address for ingress gateway on main cluster as shown: <ipAddress>.nip.io
+    - 52.154.162.242.nip.io # replace with external ip address for ingress gateway on remote0 cluster as shown: <ipAddress>.nip.io
+    - 40.89.240.186.nip.io # replace with external ip address for ingress gateway on remote1 cluster as shown: <ipAddress>.nip.io
   paths:
     - /
 

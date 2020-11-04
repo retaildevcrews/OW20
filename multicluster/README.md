@@ -7,7 +7,7 @@
 
 ### Overview
 
-Our setup is one service mesh with 3 AKS clusters. There is one main cluster with the Istio control plane and two remote clusters. The `aks` directory was copied into this `multicluster` directory so we could update different parts of the configs safely for our use case. We deployed the helium-csharp app to the main cluster and the helium-typescript app to the two remote clusters. We leveraged the multi-cluster spike from the [ngsa project](https://github.com/retaildevcrews/ngsa/tree/main/spikes/istio-multicluster).
+Our setup is one service mesh with 3 AKS clusters. There is one main cluster with the Istio control plane and two remote clusters. The `aks` directory was copied into this `multicluster` directory so we could update different parts of the configs safely for our use case. We deployed the helium-csharp app to the main cluster and the helium-typescript app to the two remote clusters. We leveraged the multi-cluster spike from the [ngsa project](https://github.com/retaildevcrews/ngsa/tree/main/spikes/istio-multicluster) in combination with the [walk through in this repo](https://github.com/retaildevcrews/OW20/tree/main/aks).
 
 ### Lessons Learned
 

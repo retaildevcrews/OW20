@@ -1,0 +1,23 @@
+# Default values for helium.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+labels:
+  aadpodidbinding: owteam3-remote2-mi #should be value of $MI_Name from the output of aad-podid.sh
+
+image:
+  repository: retaildevcrew #The specific acr created for this environment
+  name: helium-typescript # The name of the image for the helium-csharp repo
+  tag: beta
+
+ingress:
+  hosts:          # run command 'kubectl get service istio-ingressgateway -n istio-system --context <clusterName>' to get ip addresses needed below:
+    - 13.89.136.229.nip.io # replace with external ip address for ingress gateway on main cluster as shown: <ipAddress>.nip.io
+    - 52.154.162.242.nip.io # replace with external ip address for ingress gateway on remote0 cluster as shown: <ipAddress>.nip.io
+    - 40.89.240.186.nip.io # replace with external ip address for ingress gateway on remote1 cluster as shown: <ipAddress>.nip.io
+  paths:
+    - /
+
+keyVaultName: owteam3 # Replace with the name of the Key Vault that holds the secrets
+
+oneWeekVersion: remote1Cluster
+oneWeekDeployName: helium-aks-remote1

@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: heliulm-aks-destination
+spec:
+  host: helium-aks.default.svc.cluster.local
+  subsets:
+  - name: mainCluster
+    labels:
+      version: mainCluster
+  - name: remote0Cluster
+    labels:
+      version: remote0Cluster
+  - name: remote1Cluster
+    labels:
+      version: remote1Cluster

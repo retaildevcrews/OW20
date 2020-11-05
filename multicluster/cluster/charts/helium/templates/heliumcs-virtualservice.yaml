@@ -1,0 +1,36 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "helium.fullname" . }}
+spec:
+  hosts:
+  {{- range .Values.ingress.hosts }}
+    - {{ . | quote }}
+  {{- end }}
+  gateways:
+  - {{ include "helium.fullname" . }}-gateway
+  http:
+  - match:
+    {{- range .Values.ingress.paths }}
+      - uri:
+          prefix: {{ . }}
+    {{- end }}
+    route:
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "helium.fullname" . }}
+        subset: mainCluster
+      weight: {{ .Values.oneWeekMainWeight }}
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "helium.fullname" . }}
+        subset: remote0Cluster
+      weight: {{ .Values.oneWeekRemote0Weight }}
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "helium.fullname" . }}
+        subset: remote1Cluster
+      weight: {{ .Values.oneWeekRemote1Weight }}
